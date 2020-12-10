@@ -1,0 +1,131 @@
+$def with(result)
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Etiquetas Bulma -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Obtencion estilos de Bulma -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+    <title>Carga academica</title>
+</head>
+
+<body bgcolor="F2F2F2">
+
+    <!-- Encabezado color azul -->
+
+    <section class="hero is-link">
+        <div class="container">
+
+            <!-- Titulos de la pagina -->
+
+            <h1 class="title"></h1>
+            <h1 class="title">Universidad Tecnológica De Tulancingo</h1>
+            <h3 class="subtitle">Asignación de horarios y materias</h3>
+
+        </div>
+
+        <!--Cierre de sesion -->
+
+        <div class="column">
+            <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+                <div class="column"></div>
+                <div class="column">
+                    <div class="buttons is-normal is-right">
+                        <button class="button is-warning">Cerrar sesion</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra de busqueda superior izquierda -->
+
+        <div class="column">
+            <div class="column">
+                <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+
+                    <div class="column">
+                        <input class="input is-rounded" type="text" placeholder="Busqueda">
+                    </div>
+
+                    <!-- Boton para la busqueda -->
+
+                    <div class="column">
+                        <div class="buttons is-small">
+                            <button class="button is-info is-rounded">Buscar</button>
+                        </div>
+                    </div>
+
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <!-- Nombre de la tabla-->
+    <center>
+
+        <h1 class="title">Carga academica</h1>
+
+        <!-- Horario - Tabla -->
+
+        <div class="column">
+            <table class="table is-bordered">
+
+                     <thead>
+                         <tr>
+                             <th>Clave Maestro</th>
+                             <th>Nombre</th>
+                             <th>Tiempo completo</th>
+                             <th>Activo</th>
+                         </tr>
+                     </thead>
+
+                     <!-- DATOS DENTRO DE LA TABLA -->
+                     $for row in result:
+                         <tr>
+                             <td>
+                                 <a href="/view/$row['cve_maestro']">
+                                 $row['cve_maestro']
+                                 </a>
+                             </td>
+                             <td>$row['nombre'] $row['apellido_pat'] $row['apellido_mat']</td>
+                             <td>$row['tiempo_completo']</td>
+                             <td>$row['activo']</td>
+                         </tr>
+                 </table>
+</body>
+
+<br><br><br>
+
+<footer class="footer" style="background-color: lavender;">
+    <div class="content has-text-centered">
+        <p>
+            <strong class="has-text-weight">Universidad Tecnologica de Tulancingo</strong>
+            <a href="http://www.utectulancingo.edu.mx/">UTEC</a>.
+
+            <center>
+                <figure class="image is-128x128">
+                    <img src="https://github.com/MariaDelCarmenHernandezDiaz/Recursos-Test/blob/main/universidad/utec.png?raw=true"
+                        alt="UTEC">
+                </figure>
+            </center>
+        </p>
+    </div>
+</footer>
+
+</html>

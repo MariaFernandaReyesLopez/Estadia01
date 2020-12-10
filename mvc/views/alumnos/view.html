@@ -1,0 +1,543 @@
+$def with(result)
+
+<!-- Instalar bulma con > npm install bulma "En consola" -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Etiquetas Bulma -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Obtencion estilos de Bulma -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+    <title>Perfil</title>
+</head>
+
+<body bgcolor="F2F2F2">
+
+    <!-- Encabezado color verde -->
+
+    <section class="hero is-link">
+        <div class="container">
+
+            <!-- Titulos de la pagina -->
+
+            <h1 class="title"></h1>
+            <h1 class="title">Universidad Tecnológica De Tulancingo</h1>
+            <h3 class="subtitle">Asignación de horarios y materias</h3>
+
+        </div>
+
+        <!--Cierre de sesion -->
+
+        <div class="column">
+            <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+                <div class="column"></div>
+                <div class="column">
+                    <div class="buttons is-normal is-right">
+                        <button class="button is-warning">Cerrar sesion</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra de busqueda superior izquierda -->
+
+        <div class="column">
+            <div class="column">
+                <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+
+                    <div class="column">
+                        <input class="input is-rounded" type="text" placeholder="Busqueda">
+                    </div>
+
+                    <!-- Boton para la busqueda -->
+
+                    <div class="column">
+                        <div class="buttons is-small">
+                            <button class="button is-info is-rounded">Buscar</button>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                    </div>
+
+                    <div class="column">
+                    </div>
+
+                    <div class="column">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <!-- Datos del docente en una carta -->
+
+    <div class="container is-max-widescreen">
+        <div class="notification">
+            <div class="card">
+                <div class="card-content">
+
+                    <!-- TODO: Seleccionar el estilo de la etiqueta
+                        <div class="control">
+                            <div class="tags has-addons">
+                              <span class="tag is-info is-medium"></span>
+                              <span class="tag is-primary is-medium">Datos del docente</span>
+                            </div>
+                        </div> -->
+
+                    <!-- Etiqueta ficha de datos -->
+
+                    <div class="buttons">
+                        <button class="button is-info" disabled>Datos del docente</button>
+                    </div>
+
+                    <div class="media">
+
+                        <!-- Datos etiquetas -->
+
+                        <div class="column is-one-fifth">
+                            <div class="field">
+                                <div class="control">
+                                    <label>Nombre completo: </label>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <label>Adscripción: </label>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-two-thirds">
+                            <div class="field">
+
+                                <!-- Nombre -->
+
+                                <div class="control">
+                                    <input class="input is-info" type="text" placeholder="Nombre" value="$result['nombre']">
+
+                                </div>
+                                <br>
+
+                                <!-- Adscripción -->
+
+                                <div class="control">
+                                    <input class="input is-info" type="text" placeholder="Adscripción">
+                                </div>
+                                <br>
+
+                                <!-- Catalogo Sesiones -->
+
+                                <div class="control">
+                                    <div class="select is-success">
+                                        <select>
+                                            <option>Catalogo sesiones</option>
+                                            <option>7.00 a.m.</option>
+                                            <option>8.00 a.m.</option>
+                                            <option>9.00 a.m.</option>
+                                            <option>10.00 a.m.</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Fotografia -->
+
+                        <div class="column">
+                            <figure class="image is-128x128">
+                                <img src="https://i.pinimg.com/564x/7f/38/67/7f3867d94b14b1c72f0fe2c71cfbc26f.jpg"
+                                    alt="Teacher profile">
+                            </figure>
+
+                            <!-- Periodo escolar -->
+                            <br>
+                            <div class="control">
+                                <div class="select is-success">
+                                    <select>
+                                        <option>Enero-Abril</option>
+                                        <option>Septi-Dicie</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <br>
+
+    <!-- Disponibilidad - horario en una carta -->
+
+    <div class="container is-max-widescreen">
+        <div class="notification">
+            <div class="card">
+
+                <div class="card-content">
+
+                    <!-- TODO: Seleccionar el estilo de la etiqueta
+                        <div class="control">
+                            <div class="tags has-addons">
+                              <span class="tag is-info is-medium"></span>
+                              <span class="tag is-primary is-medium">Disponibilidad de horario</span>
+                            </div>
+                        </div> -->
+
+                    <!-- Etiqueta ficha de datos -->
+
+                    <div class="buttons">
+                        <button class="button is-info" disabled>Disponibilidad de horario</button>
+                    </div>
+
+                    <div class="media">
+
+                        <!-- Dia -->
+
+                        <div class="column">
+                            <article class="message">
+                                <div class="message-body">
+                                    <div class="column">
+                                        <h1 class="subtitle">Dia: </h1>
+                                        <br>
+                                        <div class="control">
+                                            <div class="select is-success">
+                                                <select>
+                                                    <option>Lunes</option>
+                                                    <option>Martes</option>
+                                                    <option>Miercoles</option>
+                                                    <option>Jueves</option>
+                                                    <option>Viernes</option>
+                                                    <option>Sabado</option>
+                                                    <option>Domingo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--  Hora -->
+
+                        <div class="column">
+                            <article class="message">
+                                <div class="message-body">
+                                    <h1 class="subtitle">Hora: </h1>
+                                    <br>
+                                    <div class="column">
+
+                                        <!-- Hora inicial -->
+
+                                        <label>Inicio: </label>
+                                        <div class="select is-success">
+                                            <select>
+                                                <option>7.00 a.m.</option>
+                                                <option>8.00 a.m.</option>
+                                                <option>9.00 a.m.</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Hora final -->
+
+                                        <label>Fin: </label>
+                                        <div class="select is-success">
+                                            <select>
+                                                <option>8.00 a.m.</option>
+                                                <option>9.00 a.m.</option>
+                                                <option>10.00 a.m.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Agregar disponibilidad -->
+
+                        <div class="control">
+
+                            <div class="column">
+                                <div class="column">
+
+                                    <div class="column">
+                                        <div class="buttons">
+                                            <button class="button is-primary is-fullwidth is-normal">Agregar
+                                                disponibilidad</button>
+                                        </div>
+
+                                        <div class="control">
+                                            <button class="button is-warning is-fullwidth is-normal">Eliminar
+                                                disponibilidad</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br>
+
+    <!-- Carrera y grupo en una carta -->
+
+    <div class="container is-max-widescreen">
+        <div class="notification">
+            <div class="card">
+
+                <div class="card-content">
+
+                    <!-- TODO: Seleccionar el estilo de la etiqueta
+                        <div class="control">
+                            <div class="tags has-addons">
+                              <span class="tag is-info is-medium"></span>
+                              <span class="tag is-primary is-medium">Disponibilidad de horario</span>
+                            </div>
+                        </div> -->
+
+                    <!-- Etiqueta ficha de datos -->
+
+                    <div class="buttons">
+                        <button class="button is-info" disabled>Carreras y grupos</button>
+                    </div>
+
+                    <div class="media">
+
+                        <!-- Carreras -->
+
+                        <div class="column">
+                            <article class="message">
+                                <div class="message-body">
+                                    <h1 class="subtitle">Carrera: </h1>
+                                    <br>
+                                    <div class="control">
+                                        <div class="select is-success">
+                                            <select>
+                                                <option>Tecnologias de la informacion y comunicacion</option>
+                                                <option>Enfermeria</option>
+                                                <option>Terapia fisica</option>
+                                                <option>Criminalistica</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!--  Grupo -->
+
+                        <div class="column">
+                            <article class="message">
+                                <div class="message-body">
+                                    <h1 class="subtitle">Grupo: </h1>
+                                    <br>
+
+                                    <div class="select is-success">
+                                        <select>
+                                            <option>TI-71</option>
+                                            <option>TI-72</option>
+                                            <option>TI-73</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Unidad academica -->
+
+                    <div class="column">
+                        <div class="column">
+
+                            <label>Unidad academica: </label>
+
+                            <div class="select is-success">
+                                <select>
+                                    <option>Universidad Tecnologica de Tulancingo</option>
+                                    <option>***-------------------------------------- Agregar universidades
+                                        correspondientes aqui: Cuatepec y Ursula
+                                        ---------------------------------------** </option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <br>
+
+        <!-- Carga academica en una carta -->
+
+        <div class="container is-max-widescreen">
+            <div class="notification">
+                <div class="card">
+
+                    <div class="card-content">
+
+                        <!-- TODO: Seleccionar el estilo de la etiqueta
+                        <div class="control">
+                            <div class="tags has-addons">
+                              <span class="tag is-info is-medium"></span>
+                              <span class="tag is-primary is-medium">Disponibilidad de horario</span>
+                            </div>
+                        </div> -->
+
+                        <!-- Etiqueta ficha de datos -->
+
+                        <div class="buttons">
+                            <button class="button is-info" disabled>Carga academica</button>
+                        </div>
+
+                        <div class="media">
+
+                            <!--  Carga academica -->
+
+                            <div class="column">
+                                <article class="message">
+                                    <div class="message-body">
+                                        <br>
+
+                                        <div class="table-container">
+                                            <table class="table is-bordered">
+
+                                                <!-- Tabla - columnas -->
+
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>Clave</th>
+                                                        <th>Nombre materia</th>
+                                                        <th>Grupo</th>
+                                                        <th>Horario</th>
+                                                        <th>Seleccion</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <!-- Tabla - Filas -->
+
+                                                <!-- Ejemplo 1 -->
+                                                <tr>
+                                                    <th>1</th>
+                                                    <td>18TI-MEPR</td>
+                                                    <td>Metodología de la Programación</td>
+                                                    <td>1 A (Tecnologías de la Información área Desarrollo de Software
+                                                        Multiplataforma)</td>
+                                                    <td>
+                                                        <button
+                                                            class="button is-rounded is-medium is-success is-inverted">
+                                                            <span class="icon is-large has-text-success">
+                                                                <i class="fas fa-check-circle"></i>
+                                                            </span>
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="button is-danger">Eliminar carga</button>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Ejemplo 2 -->
+                                                <tr>
+                                                    <th>2</th>
+                                                    <td>18TI-AW</td>
+                                                    <td>Aplicaciones Web</td>
+                                                    <td>3 A (Tecnologías de la Información área Desarrollo de Software
+                                                        Multiplataforma)</td>
+                                                    <td>
+                                                        <button
+                                                            class="button is-rounded is-medium is-success is-inverted">
+                                                            <span class="icon is-large has-text-success">
+                                                                <i class="fas fa-check-circle"></i>
+                                                            </span>
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="button is-danger">Eliminar carga</button>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Ejemplo 3 -->
+                                                <tr>
+                                                    <th>3</th>
+                                                    <td>18TI-AM</td>
+                                                    <td>Aplicaciones Moviles</td>
+                                                    <td>7 A (Tecnologías de la Información área Desarrollo de Software
+                                                        Multiplataforma)</td>
+                                                    <td>
+                                                        <button
+                                                            class="button is-rounded is-medium is-success is-inverted">
+                                                            <span class="icon is-large has-text-success">
+                                                                <i class="fas fa-check-circle"></i>
+                                                            </span>
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="button is-danger">Eliminar carga</button>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<br><br><br>
+
+<footer class="footer" style="background-color: lavender;">
+    <div class="content has-text-centered">
+        <p>
+            <strong class="has-text-weight">Universidad Tecnologica de Tulancingo</strong>
+            <a href="http://www.utectulancingo.edu.mx/">UTEC</a>.
+
+            <center>
+                <figure class="image is-128x128">
+                    <img src="https://github.com/MariaDelCarmenHernandezDiaz/Recursos-Test/blob/main/universidad/utec.png?raw=true"
+                        alt="UTEC">
+                </figure>
+            </center>
+        </p>
+    </div>
+</footer>
+
+</html>

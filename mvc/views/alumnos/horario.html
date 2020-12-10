@@ -1,0 +1,485 @@
+$def with(result)
+
+<!-- Instalar bulma con > npm install bulma "En consola" -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Etiquetas Bulma -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Obtencion estilos de Bulma -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+    <title>Horario</title>
+</head>
+
+<body bgcolor="F2F2F2">
+
+    <!-- Encabezado color azul -->
+
+    <section class="hero is-link">
+        <div class="container">
+
+            <!-- Titulos de la pagina -->
+
+            <h1 class="title"></h1>
+            <h1 class="title">Universidad Tecnológica De Tulancingo</h1>
+            <h3 class="subtitle">Asignación de horarios y materias</h3>
+
+        </div>
+
+        <!--Cierre de sesion -->
+
+        <div class="column">
+            <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+                <div class="column"></div>
+                <div class="column">
+                    <div class="buttons is-normal is-right">
+                        <button class="button is-warning">Cerrar sesion</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra de busqueda superior izquierda -->
+
+        <div class="column">
+            <div class="column">
+                <div class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+
+                    <div class="column">
+                        <input class="input is-rounded" type="text" placeholder="Busqueda">
+                    </div>
+
+                    <!-- Boton para la busqueda -->
+
+                    <div class="column">
+                        <div class="buttons is-small">
+                            <button class="button is-info is-rounded">Buscar</button>
+                        </div>
+                    </div>
+
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+
+                    <div class="column"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <!-- Nombre profesor-->
+    <center>
+
+        <h1 class="title">Nombre completo del profesor</h1>
+
+
+        <!-- Fotografia -->
+
+        <div class="column">
+            <figure class="image is-128x128">
+                <img src="https://i.pinimg.com/564x/5b/25/e6/5b25e66610de33f4af0d6c8d634e2fc0.jpg"
+                    alt="Teacher profile">
+            </figure>
+            <br>
+
+            <!-- Periodo escolar -->
+            <br>
+
+            <div class="select is-success">
+                <select>
+                    <option>SEPTIEMBRE - DICIEMBRE 2020</option>
+                    <option>ENERO - ABRIL 2020</option>
+                </select>
+            </div>
+        </div>
+
+    </center>
+
+
+    <br>
+
+    <!-- Ubicacion y hora en una carta -->
+
+    <div class="container is-max-widescreen">
+        <div class="notification">
+            <div class="card">
+
+                <div class="card-content">
+
+                    <!-- TODO: Seleccionar el estilo de la etiqueta
+                                            <div class="control">
+                                                <div class="tags has-addons">
+                                                  <span class="tag is-info is-medium"></span>
+                                                  <span class="tag is-primary is-medium">Disponibilidad de horario</span>
+                                                </div>
+                                            </div> -->
+
+                    <!-- Etiqueta ficha de datos -->
+
+                    <div class="buttons"> <button class="button is-info" disabled>Ubicacion y hora</button>
+                    </div>
+
+                    <div class="media">
+
+                        <!-- Dia -->
+
+                        <div class="column">
+                            <article class="message">
+                                <div class="message-body">
+                                    <div class="column">
+                                        <h1 class="subtitle">Dia:
+                                        </h1>
+                                        <br>
+                                        <div class="control">
+                                            <div class="select is-success">
+                                                <select>
+                                                    <option>Lunes</option>
+                                                    <option>Martes</option>
+                                                    <option>Miercoles</option>
+                                                    <option>Jueves</option>
+                                                    <option>Viernes</option>
+                                                    <option>Sabado</option>
+                                                    <option>Domingo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+
+                        <!-- Hora -->
+
+                        <div class="column">
+                            <article class="message">
+                                <div class="message-body">
+                                    <div class="column">
+                                        <h1 class="subtitle">Hora:
+                                        </h1>
+                                        <br>
+                                        <div class="control">
+                                            <div class="select is-success">
+                                                <select>
+                                                    <option>8:00 a.m - 9:00 a.m</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+
+                        <!-- Aula -->
+
+                        <div class="column">
+                            <article class="message">
+                                <div class="message-body">
+                                    <div class="column">
+                                        <h1 class="subtitle">Aula:
+                                        </h1>
+                                        <br>
+                                        <div class="control">
+                                            <div class="select is-success">
+                                                <select>
+                                                    <option>Rectoria</option>
+                                                    <option>1</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Unidad academica -->
+
+                    <div class="column">
+                        <div class="column">
+
+                            <label>Edificio:
+                            </label>
+
+                            <div class="select is-success">
+                                <select>
+                                    <option>Rectoria</option>
+                                    <option>* * *
+                                        --------------------------------------------------------------------------
+                                        Agregar los demas edificios
+                                        -----------------------------------------------------------**
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+
+        <!-- Horario -->
+
+        <div class="container is-max-widescreen">
+            <div class="notification">
+                <div class="card">
+
+                    <div class="card-content">
+
+                        <!-- TODO: Seleccionar el estilo de la etiqueta
+                                                <div class="control">
+                                                    <div class="tags has-addons">
+                                                      <span class="tag is-info is-medium"></span>
+                                                      <span class="tag is-primary is-medium">Disponibilidad de horario</span>
+                                                    </div>
+                                                </div> -->
+
+                        <!-- Etiqueta ficha de datos -->
+
+                        <div class="buttons"> <button class="button is-info" disabled>Horario</button>
+                        </div>
+
+                        <div class="media">
+
+                            <!-- Carreras -->
+
+                            <div class="column">
+                                <article class="message">
+                                    <div class="message-body">
+                                        <h1 class="subtitle">Carrera:
+                                        </h1>
+                                        <br>
+                                        <div class="control">
+                                            <div class="select is-success">
+                                                <select>
+                                                    <option>Tecnologias de la informacion y comunicacion</option>
+                                                    <option>Enfermeria</option>
+                                                    <option>Terapia fisica</option>
+                                                    <option>Criminalistica</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!--  Grupo -->
+
+                            <div class="column">
+                                <article class="message">
+                                    <div class="message-body">
+                                        <h1 class="subtitle">Grupo:
+                                        </h1>
+                                        <br>
+
+                                        <div class="select is-success">
+                                            <select>
+                                                <option>TI-71</option>
+                                                <option>TI-72</option>
+                                                <option>TI-73</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+
+                            <!-- Profesor -->
+
+                            <div class="column">
+                                <article class="message">
+                                    <div class="message-body">
+                                        <h1 class="subtitle">Profesor:
+                                        </h1>
+                                        <br>
+                                        <div class="control">
+                                            <div class="select is-success">
+                                                <select disabled>
+                                                    <option>Nombre completo del profesor</option>
+                                                    <option>Nombre completo del profesor</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!--  Total de horas -->
+                            <div class="column">
+
+                                <article class="message">
+                                    <div class="message-body">
+                                        <h1 class="subtitle">Total de horas:
+                                        </h1>
+                                        <br>
+
+                                        <div class="select is-success">
+                                            <select>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Horario - Tabla -->
+
+                        <div class="column">
+                            <article class="message">
+                                <div class="message-body">
+                                    <table class="table is-bordered">
+
+                                        <!-- Tabla - columnas -->
+
+                                        <thead>
+                                            <tr>
+                                                <th>Hora</th>
+                                                <th>Lunes</th>
+                                                <th>Martes</th>
+                                                <th>Miercoles</th>
+                                                <th>Jueves</th>
+                                                <th>Viernes</th>
+                                                <th>Sabado</th>
+                                                <th>Domingo</th>
+                                            </tr>
+                                        </thead>
+
+                                        <!-- Tabla - Filas -->
+
+                                        <!-- Ejemplo 1 -->
+                                        <tr>
+                                            <th>7 : 00 - 8 : 00 a.m</th>
+                                            <td>
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    Metodologia de la programacion
+                                                </label>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+
+                                        <!-- Ejemplo 2 -->
+                                        <tr>
+                                            <th>9 : 00 - 10 : 00 a.m</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    Metodologia de la programacion
+                                                </label>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <!-- Ejemplo 3 -->
+                                        <tr>
+                                            <th>11 : 00 - 12 : 00 p.m</th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                                <label class="checkbox">
+                                                    <input type="checkbox">
+                                                    Redes
+                                                </label>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+
+                                    </table>
+
+
+                                    <!-- Eliminar casilla del horario -->
+
+                                    <div class="column">
+                                        <div class="buttons">
+                                            <button class="button is-danger is-normal">Eliminar carga</button>
+                                        </div>
+
+
+                                        <!-- Horario profesor y alumno -->
+
+                                        <div class="buttons">
+                                            <button class="button is-primary is-normal">Horario - Profesor</button>
+                                            <button class="button is-warning is-normal">Horario - Alumno</button>
+
+
+                                            <!-- Dia impresion -->
+                                            <div class="column is-one-fifth"></div>
+
+                                            <div class="columns">
+                                                <div class="column is-three-quarters"></div>
+                                                <div>Fecha impresion:
+                                                </div>
+
+                                                <div class="column">
+                                                    <input type="date" id="start" value="2020-11-13" min="2020-01-01">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<br><br><br>
+
+<footer class="footer" style="background-color: lavender;">
+    <div class="content has-text-centered">
+        <p>
+            <strong class="has-text-weight">Universidad Tecnologica de Tulancingo</strong>
+            <a href="http://www.utectulancingo.edu.mx/">UTEC</a>.
+
+            <center>
+                <figure class="image is-128x128">
+                    <img src="https://github.com/MariaDelCarmenHernandezDiaz/Recursos-Test/blob/main/universidad/utec.png?raw=true"
+                        alt="UTEC">
+                </figure>
+            </center>
+        </p>
+    </div>
+</footer>
+
+</html>
