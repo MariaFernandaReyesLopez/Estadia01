@@ -1,0 +1,91 @@
+<!-- Instalar bulma con > npm install bulma "En consola" -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Etiquetas Bulma -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Obtencion estilos de Bulma -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    
+    <title>Log In</title>
+</head>
+
+<section class="hero is-link is-fullheight">
+    <div class="container">
+
+        <!-- Titulos de la pagina -->
+
+        <h1 class="title"></h1>
+        <h1 class="title">Universidad Tecnológica De Tulancingo</h1>
+        <h3 class="subtitle">Asignación de horarios y materias</h3>
+
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+            <form action="/login" class="box" method="POST">
+              <div class="field">
+                <label for="" class="label" name="user">Usuario</label>
+                <div class="control has-icons-left">
+                  <input type="email" placeholder="ejemplo@algo.com" class="input" required>
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="" class="label" name="pass">contraseña</label>
+                <div class="control has-icons-left">
+                  <input type="password" placeholder="*******" class="input" required>
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="" class="checkbox">
+                  <input type="checkbox">
+                 Mantener la sesion abierta
+                </label>
+              </div>
+              <div class="field">
+                <button class="button is-success">
+                  Iniciar sesion
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<br><br><br>
+
+<footer class="footer" style="background-color: lavender;">
+    <div class="content has-text-centered">
+        <p>
+            <strong class="has-text-weight">Universidad Tecnologica de Tulancingo</strong>
+            <a href="http://www.utectulancingo.edu.mx/">UTEC</a>.
+
+            <center>
+                <figure class="image is-128x128">
+                    <img src="https://github.com/MariaDelCarmenHernandezDiaz/Recursos-Test/blob/main/universidad/utec.png?raw=true"
+                        alt="UTEC">
+                </figure>
+            </center>
+        </p>
+    </div>
+</footer>
+
+</html>
